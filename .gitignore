@@ -1,5 +1,5 @@
 
-# Created by https://www.gitignore.io/api/c++,macos,clion,windows
+# Created by https://www.gitignore.io/api/lyx,c++,macos,clion,windows
 
 ### C++ ###
 # Prerequisites
@@ -34,17 +34,6 @@
 *.exe
 *.out
 *.app
-
-# Created by https://www.gitignore.io/api/lyx
-
-### LyX ###
-# Ignore LyX backup and autosave files
-# http://www.lyx.org/
-*.lyx~
-*.lyx#
-
-# End of https://www.gitignore.io/api/lyx
-
 
 ### CLion ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
@@ -108,6 +97,12 @@ fabric.properties
 # Sonarlint plugin
 .idea/sonarlint
 
+### LyX ###
+# Ignore LyX backup and autosave files
+# http://www.lyx.org/
+*.lyx~
+*.lyx#
+
 ### macOS ###
 *.DS_Store
 .AppleDouble
@@ -156,4 +151,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/c++,macos,clion,windows
+# End of https://www.gitignore.io/api/lyx,c++,macos,clion,windows
