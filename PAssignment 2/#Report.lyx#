@@ -1334,7 +1334,24 @@ return s
  and why?
 \end_layout
 
-\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Formula 
 \[
@@ -1346,7 +1363,6 @@ F(n)=n*((2*2)+2)=2n^{2}+2n+1\text{∴}O(n^{2})
 
 \end_layout
 
-\end_deeper
 \begin_layout Standard
 \begin_inset VSpace defskip
 \end_inset
@@ -1409,6 +1425,26 @@ Push i onto the stack
  of comparisons perform on elements of the vector.
  How can you classify the algorithms using the Big-O asymptotic notation
  and why? Compare the performance of both the algorithms.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(n)=n*1*2+1+1=2n+2\text{∴}O(n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
