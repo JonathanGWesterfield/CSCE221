@@ -9,17 +9,17 @@ vector<int> computeVectorSpan(vector<int> &x)
     vector<int> s(x.size());
 
     int j = 1;
-    for(int i = 0; i <= x.size(); i++)
+    for(int i = 0; i <= x.size(); i++) // n iterations
     {
-        j = 1;
-        while (j <= i && (x[i-j] <= x[i]))
+        j = 1; // 1 operation: assignment
+        while (j <= i && (x[i-j] <= x[i])) // n operations
         {
-            j= j + 1;
+            j = j + 1; // 2 operations: assignment & addition
         }
-        s[i] = j;
+        s[i] = j; // 1 operation: assignment
     }
 
-    return s;
+    return s; // 1 operation
 }
 
 

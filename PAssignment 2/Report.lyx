@@ -1334,6 +1334,26 @@ return s
  and why?
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(n)=n*((2*2)+2)=2n^{2}+2n+1\text{∴}O(n^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 (20 pts) Compute the spans using a stack as an auxiliary data structure
  storing (some) indexes of x.
@@ -1391,6 +1411,19 @@ Push i onto the stack
  and why? Compare the performance of both the algorithms.
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(n)=n*1*2+1+1=2n+2\text{∴}O(n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 (10 pts) Programming style, and program organization and design: naming,
  indentation, whitespace, comments, declaration, variables and constants,
@@ -1697,7 +1730,7 @@ For this assignment, I used templates just in case other data types were
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /Users/JonathanWesterfield/Desktop/PAssignment 2 Results.png
+	filename PAssignment 2 Results.png
 	scale 80
 
 \end_inset

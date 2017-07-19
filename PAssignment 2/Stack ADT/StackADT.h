@@ -180,24 +180,25 @@ template <class T> vector<int> StackADT<T>::computeStackSpan(const vector<T> &x)
     // vector<int> x = {6, 3, 4, 5, 2};
     vector<T> s(x.size());
 
-    for(int i = 0 ; i < x.size(); ++i)
+    for(int i = 0 ; i < x.size(); ++i) // n iterations
     {
-        while(!stack.empty() && x[stack.top()] <= x[i]) // only runs once per for loop
+        while(!stack.empty() && x[stack.top()] <= x[i]) // only runs once per for loop - 1 operation
         {
-            stack.pop();
+            stack.pop(); // 1 operation
         }
         if(stack.empty()) // only runs once per for loop
         {
-            s[i] = i + 1;
+            s[i] = i + 1; // 2 operations: assignment and addition
         }
         else // only runs once per for loop
         {
-            s[i] = i - stack.top();
+            s[i] = i - stack.top(); // 2 operations: assignment and subtraction
         }
-        stack.push(i);
+
+        stack.push(i); // 1 operation
     }
 
-    return s;
+    return s; // 1 operation
 }
 
 
