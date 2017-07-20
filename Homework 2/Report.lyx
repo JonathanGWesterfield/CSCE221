@@ -1113,7 +1113,7 @@ return(1 + countNodes(currentNode->next));
 \begin_layout LyX-Code
 \begin_inset Formula 
 \[
-a_{n}=a_{n-1}+1
+Ra_{n}=a_{n-1}+1
 \]
 
 \end_inset
@@ -1212,6 +1212,13 @@ return maxNum(x, lowIndex, highIndex - 1);
 \end_layout
 
 \begin_layout LyX-Code
+\begin_inset Formula 
+\[
+O(n)
+\]
+
+\end_inset
+
 
 \end_layout
 
@@ -1238,6 +1245,47 @@ return maxNum(x, lowIndex, highIndex - 1);
  Justify your answer.
  Use Big-O notation to represent the efficiency of your algorithm.
  
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The stack data structure would be the best data structure to use for determining
+ if a string is a palindrome.
+ To do this, you would push the string onto the stack starting from the
+ beginning of the string.
+ From there, you would pop off elements and compare those elements (which
+ would be starting from the end of the string) to the elements at the beginning
+ of the string.
+ This require going through the string 2 times.
+ One time to push on the stack and the other time to pop and compare.
+ This means that this stack implementation would be 
+\begin_inset Formula $O(n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
 \begin_inset VSpace vfill
 \end_inset
 
@@ -1247,6 +1295,54 @@ return maxNum(x, lowIndex, highIndex - 1);
 \begin_layout Enumerate
 (10 points) Write a pseudocode to implement the stack ADT using two queues.
  What is the running time of the push and pop functions in this case? 
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+Queue1
+\end_layout
+
+\begin_layout LyX-Code
+Queue2
+\end_layout
+
+\begin_layout LyX-Code
+Push(x) // puts element on the stack (which is queue 1)
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+Queue1.enqueue(x);
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+Pop() // takes element out of queue 1 and puts it into queue 2
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+if(¬Queue1.isempty())
+\end_layout
+
+\begin_layout LyX-Code
+Queue2.enqueue(Queue1.dequeue)
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset VSpace vfill
 \end_inset
 
