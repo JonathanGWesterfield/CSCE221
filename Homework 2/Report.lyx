@@ -1325,8 +1325,19 @@ Pop() // takes element out of queue 1 and puts it into queue 2
 if(¬Queue1.isempty())
 \end_layout
 
+\begin_deeper
 \begin_layout LyX-Code
 Queue2.enqueue(Queue1.dequeue)
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+else
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+throw exception
 \begin_inset VSpace defskip
 \end_inset
 
@@ -1335,11 +1346,25 @@ Queue2.enqueue(Queue1.dequeue)
 
 \end_deeper
 \end_deeper
+\end_deeper
 \begin_layout Standard
 \begin_inset VSpace defskip
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The Push function is 
+\begin_inset Formula $O(1)$
+\end_inset
+
+ because there is only one operation done.
+ The pop function is also 
+\begin_inset Formula $O(1)$
+\end_inset
+
+ since there is only 1 function that can happen.
 \end_layout
 
 \begin_layout Standard
