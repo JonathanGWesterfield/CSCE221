@@ -1080,12 +1080,46 @@ due July 25 at 11:59 pm.
  Write a recurrence relation that represents your algorithm.
  Solve the relation and obtain the running time of the algorithm in Big-O.
  
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+int countNodes(node *currentNode) {  
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+if(currentNode == NULL)      
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+return(0);  
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+return(1 + countNodes(currentNode->next)); 
+\end_layout
+
+\begin_layout LyX-Code
+}
+\begin_inset VSpace defskip
+\end_inset
+
+
 \begin_inset VSpace vfill
 \end_inset
 
 
 \end_layout
 
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
 (15 points) Write a recursive function that finds the maximum value in an
  array of int values without using any loops.
@@ -1134,17 +1168,72 @@ due July 25 at 11:59 pm.
  point at every case.
  Provide a recursive relation and solution for each case.
  
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Best runtime: 
+\begin_inset Formula $\text{Ω}(nlogn)$
+\end_inset
+
+.
+ Average case: 
+\begin_inset Formula $θ(nlogn)$
+\end_inset
+
+.
+ Worst case: 
+\begin_inset Formula $O(n^{2})$
+\end_inset
+
+.
+\begin_inset VSpace defskip
+\end_inset
+
+
 \begin_inset VSpace vfill
 \end_inset
 
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 (10 points) What is the best, worst and average running time of merge sort
  algorithm? Use two methods for solving a recurrence relation for the average
  case to justify your answer.
  
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Best runtime: 
+\begin_inset Formula $\text{Ω}(nlogn)$
+\end_inset
+
+.
+  Average case: 
+\begin_inset Formula $θ(nlogn)$
+\end_inset
+
+.
+ Worst case: 
+\begin_inset Formula $O(nlogn)$
+\end_inset
+
+.
+\begin_inset VSpace defskip
+\end_inset
+
+
 \begin_inset VSpace vfill
 \end_inset
 
@@ -1155,6 +1244,7 @@ due July 25 at 11:59 pm.
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 (10 points) R-10.17 p.
  493 For the following statements about red-black trees, provide a justification
