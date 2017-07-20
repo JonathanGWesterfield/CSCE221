@@ -1108,6 +1108,28 @@ return(1 + countNodes(currentNode->next));
 
 \begin_layout LyX-Code
 }
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula 
+\[
+a_{n}=a_{n-1}+1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula 
+\[
+O(n)
+\]
+
+\end_inset
+
+
 \begin_inset VSpace defskip
 \end_inset
 
@@ -1126,6 +1148,78 @@ return(1 + countNodes(currentNode->next));
  Write a recurrence relation that represents your algorithm.
  Solve the relation and obtain the running time of the algorithm in Big-O.
  
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+int maxNum(int x[], int lowIndex, int highIndex) {     
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+if (lowIndex == highIndex) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+return x[lowIndex];
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+} 
+\end_layout
+
+\begin_layout LyX-Code
+if(lowIndex < highIndex) { 
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+if(x[lowIndex] < x[highIndex]) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+return maxNum(x, lowIndex + 1, highIndex);
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+return maxNum(x, lowIndex, highIndex - 1);
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset VSpace defskip
+\end_inset
+
+
 \begin_inset VSpace vfill
 \end_inset
 
@@ -1136,6 +1230,7 @@ return(1 + countNodes(currentNode->next));
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 (10 points) What data structure is most suitable to determine if a string
  s is a palindrome, that is, it is equal to its reverse.
