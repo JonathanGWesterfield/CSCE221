@@ -4,39 +4,59 @@ using namespace std;
 class DoublyLinkedList; // class declaration
 
 // list node
-struct DListNode {
-  int obj;
-  DListNode *prev, *next;
-  DListNode(int e=0, DListNode *p = NULL, DListNode *n = NULL)
-    : obj(e), prev(p), next(n) {}
+struct DListNode
+{
+    int obj;
+    DListNode *prev, *next;
+    DListNode(int element = 0, DListNode *previous = NULL, DListNode *next = NULL)
+    {
+        this -> obj = element;
+        this -> prev = previous;
+        this -> next = next;
+    }
 };
 
 // doubly linked list
-class DoublyLinkedList {
+class DoublyLinkedList
+{
 private:
-  DListNode header, trailer;
+    DListNode head, tail;
+
 public:
-  DoublyLinkedList() : header(0), trailer(0) // constructor
-  { header.next = &trailer; trailer.prev = &header; }
-  DoublyLinkedList(const DoublyLinkedList& dll); // copy constructor
-  ~DoublyLinkedList(); // destructor
-  DoublyLinkedList& operator=(const DoublyLinkedList& dll); // assignment operator
-  // return the pointer to the first node
-  DListNode *getFirst() const { return header.next; } 
-  // return the pointer to the trailer
-  const DListNode *getAfterLast() const { return &trailer; }
-  // return if the list is empty
-  bool isEmpty() const { return header.next == &trailer; }
-  int first() const; // return the first object
-  int last() const; // return the last object
-  void insertFirst(int newobj); // insert to the first of the list
-  int removeFirst(); // remove the first node
-  void insertLast(int newobj); // insert to the last of the list
-  int removeLast(); // remove the last node
-  void insertAfter(const DListNode &p, int newobj);
-  void insertBefore(const DListNode &p, int newobj);
-  int removeAfter(const DListNode &p);
-  int removeBefore(const DListNode &p);
+    DoublyLinkedList() : head(0), tail(0) // constructor
+    {
+        head.next = &tail;
+        tail.prev = &head;
+    }
+    DoublyLinkedList(const DoublyLinkedList& dll); // copy constructor
+    ~DoublyLinkedList(); // destructor
+    DoublyLinkedList& operator=(const DoublyLinkedList& dll); // assignment operator
+    // return the pointer to the first node
+    DListNode *getFirst() const
+    {
+        return head.next;
+    }
+    // return the pointer to the tail
+    const DListNode *getAfterLast() const
+    {
+        return &tail;
+    }
+    // return if the list is empty
+    bool isEmpty() const
+    {
+        return head.next == &tail;
+    }
+    int first() const; // return the first object
+    int last() const; // return the last object
+    void insertFirst(int newobj); // insert to the first of the list
+    int removeFirst(); // remove the first node
+    void insertLast(int newobj); // insert to the last of the list
+    int removeLast(); // remove the last node
+    void insertAfter(const DListNode &p, int newobj);
+    void insertBefore(const DListNode &p, int newobj);
+    void removeAfter(const DListNode &p);
+    void removeBefore(const DListNode &p);
+    bool isEmpty(); // checks if the linked list is empty
 };
 
 // output operator
