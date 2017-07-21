@@ -311,14 +311,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500524561170</updated>
+<<<<<<< HEAD
+      <workItem from="1500524562680" duration="1542000" />
+=======
       <workItem from="1500524562680" duration="1040000" />
       <workItem from="1500565047594" duration="21000" />
       <workItem from="1500565207534" duration="159000" />
+>>>>>>> 0278867e0ac221dd1eaf9d5c37193223f040e554
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="1542000" />
+=======
     <option name="totallyTimeSpent" value="1220000" />
+>>>>>>> 0278867e0ac221dd1eaf9d5c37193223f040e554
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1436" height="877" extended-state="6" />

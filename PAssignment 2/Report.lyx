@@ -1475,6 +1475,19 @@ F(n)=n*1*2+1+1=2n+2\text{∴}O(n)
 
 \end_layout
 
+\begin_layout Standard
+The algorithm with the stack implementation is ultimately a better algorithm
+ due to the reduced time complexity.
+ It performs less operations, therefore, it is faster.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 (10 pts) Programming style, and program organization and design: naming,
  indentation, whitespace, comments, declaration, variables and constants,
@@ -1675,6 +1688,15 @@ Typed report made preferably using "\SpecialChar LyX
 (2 pts) Program description; purpose of the assignment
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+This assignment is intended to teach us about the stack data structure,
+ how to implement it, and how it can be applied to specific situations.
+ In this assignment, the stack data structure was used to compute the spans
+ of stock data.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 (4 pts) Data structures description 
 \begin_inset Separator latexpar

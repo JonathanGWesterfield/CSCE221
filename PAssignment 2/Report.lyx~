@@ -1475,6 +1475,19 @@ F(n)=n*1*2+1+1=2n+2\text{∴}O(n)
 
 \end_layout
 
+\begin_layout Standard
+The algorithm with the stack implementation is ultimately a better algorithm
+ due to the reduced time complexity.
+ It performs less operations, therefore, it is faster.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 (10 pts) Programming style, and program organization and design: naming,
  indentation, whitespace, comments, declaration, variables and constants,
@@ -1688,14 +1701,43 @@ Typed report made preferably using "\SpecialChar LyX
 Theoretical definition
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+A stack is an abstract data type that is a collection of elements based
+ on 2 functions - Push and Pop.
+ Push adds an element while pop removes the most recently added element.
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 Real implementation
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+My stack function was implemented using a vector.
+ The push function adds an element to the end of the vector while the pop
+ function does the opposite.
+ The empty function returns a boolean if the stack is empty and the top
+ function returns the element at the top of the stack (end of the vector).
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 Analysis of the best and worst scenarios for computing spans.
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+The worst case scenario is if the element in an array of n elements is the
+ largest value in the array and it is also the last value in the array.
+ This means that every value would be parsed in the array in order to compute
+ the span.
+ The best case scenario is if the the element is either at the very beginning
+ of the array or is the smallest value in the array.
+\end_layout
+
+\end_deeper
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
