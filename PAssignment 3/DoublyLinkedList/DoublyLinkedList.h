@@ -52,14 +52,16 @@ public:
     int removeFirst(); // remove the first node
     void insertLast(int newobj); // insert to the last of the list
     int removeLast(); // remove the last node
-    void insertAfter(const DListNode &p, int newobj);
-    void insertBefore(const DListNode &p, int newobj);
-    void removeAfter(const DListNode &p);
-    void removeBefore(const DListNode &p);
+    void insertAfter(DListNode &p, int newobj);
+    void insertBefore(DListNode &p, int newobj);
+    void removeAfter(DListNode &p);
+    void removeBefore(DListNode &p);
     bool isEmpty(); // checks if the linked list is empty
+
 };
 
 // output operator
 ostream& operator<<(ostream& out, const DoublyLinkedList& dll);
 // return the list length
 int DoublyLinkedListLength(DoublyLinkedList& dll);
+DoublyLinkedList& find(DoublyLinkedList dll, int findObj);

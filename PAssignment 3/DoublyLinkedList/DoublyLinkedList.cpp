@@ -14,14 +14,12 @@ DoublyLinkedList::DoublyLinkedList(const DoublyLinkedList& dll)
     this -> tail.prev = &head;
 
     DListNode *current;
+    // TODO: Something is wrong with this function it does not work
     current = dll.getFirst(); // sets traversing node to the first object in the list
 
-    DListNode *newNode = new DListNode(current->obj,&head, &tail); // creates the first object in the list
-    head.next = newNode;
-    tail.prev = newNode;
     while(current != dll.getAfterLast()) // goes through the list and deep copies all elements
     {
-        insertLast(current->obj); // inserts deep copy into the new list
+        this -> insertLast(current->obj); // inserts deep copy into the new list
         current = current->next; // moves to next object
     }
 }
@@ -31,9 +29,7 @@ DoublyLinkedList& DoublyLinkedList::operator=(const DoublyLinkedList& dll)
 {
   // Delete the whole list
 
-    DListNode *previous, *current;
-    current = head.next;
-    while(!this->isEmpty()) // while this class isn't empty
+    /*while(!this->isEmpty()) // while this class isn't empty
     {
         this->removeLast();
     }
@@ -42,19 +38,18 @@ DoublyLinkedList& DoublyLinkedList::operator=(const DoublyLinkedList& dll)
     head.next = &tail;
     tail.prev = &head; // sets the list to empty by pointing the ends at each other
 
-  /* Performs a deep copy of the list */
+    // Performs a deep copy of the list
     // Initialize the list
     this -> head.next = &tail;
-    this -> tail.prev = &head;
+    this -> tail.prev = &head;*/
 
+    DListNode *current;
+    // TODO: Something is wrong with this function it does not work
     current = dll.getFirst(); // sets traversing node to the first object in the list
 
-    DListNode *newNode = new DListNode(current->obj,&head, &tail); // creates the first object in the list
-    head.next = newNode;
-    tail.prev = newNode;
     while(current != dll.getAfterLast()) // goes through the list and deep copies all elements
     {
-        insertLast(current->obj); // inserts deep copy into the new list
+        this -> insertLast(current->obj); // inserts deep copy into the new list
         current = current->next; // moves to next object
     }
     return *this;
@@ -183,51 +178,76 @@ int DoublyLinkedList::last() const
 }
 
 // insert the new object after the node p
-void DoublyLinkedList::insertAfter(const DListNode &p, int newObj)
+void DoublyLinkedList::insertAfter(DListNode &p, int newObj)
 {
     if(p.next == &tail) // for if this is the last element for some reason
     {
         insertLast(newObj);
         return;
     }
-    DListNode *copyP= new DListNode(p.obj, p.prev, p.next); // creates a copy of p
-
-    DListNode *newNode = new DListNode(newObj, copyP->prev, copyP->next); // sets previous to p and next to p's next
-    copyP->next->prev = newNode; // sets the next object's prev to the new node
-    copyP->next = newNode; // sets the new node to next
-
-    delete copyP; // deletes the copy
-    copyP = NULL; // frees the dangling pointer
-
-    // TODO: check this to make sure it works
+    DListNode *newNode = new DListNode(newObj, &p, p.next);
+    p.next->prev = newNode; // sets the next nodes prev to the new node
+    p.next = newNode; // sets p's next node to the new node
+    // TODO: Test if this works
 }
 
 // insert the new object before the node p
-void DoublyLinkedList::insertBefore(const DListNode &p, int newObj)
+void DoublyLinkedList::insertBefore(DListNode &p, int newObj)
 {
-    /* Complete this function */
-    //TODO: Finish this
+    if(p.next == &tail) // for if this is the last element for some reason
+    {
+        insertLast(newObj);
+        return;
+    }
+
+    DListNode *newNode = new DListNode(newObj, p.prev, &p);
+    p.prev->next = newNode;
+    p.prev = newNode;
+
+
+    //TODO: test this
 }
 
 // remove the node after the node p
-void DoublyLinkedList::removeAfter(const DListNode &p)
+void DoublyLinkedList::removeAfter(DListNode &p)
 {
-    /* Complete this function */
-    //TODO: Finish this
+    DListNode *current = new DListNode();
+    current = &p; // goes to node p
+    current = current->next; // moves to the node after p
+    p.next = current->next; // sets p's next to the node after current
+    current->next->prev = &p; // sets the node after current's prev to p
+    cout << "The node containing " << current->obj << ", after " << &p << " has been deleted. " << endl;
+    delete current; // deletes the node after p
+    current = NULL; // frees the dangling pointer
+
+    //TODO: test this function
 }
 
 // remove the node before the node p
-void DoublyLinkedList::removeBefore(const DListNode &p)
+void DoublyLinkedList::removeBefore(DListNode &p)
 {
-    /* Complete this function */
+    DListNode *current = new DListNode();
+    current = &p; // goes to node p
+    current = current->prev; // moves to the node before p
+    p.prev = current->prev;
+    current->prev->next = &p;
+    cout << "The node containing " << current->obj << ", before" << &p << " has been deleted. " << endl;
+    delete current; // deletes the node after p
+    current = NULL; // frees the dangling pointer
     //TODO: Finish this
 }
 
 // return the list length
 int DoublyLinkedListLength(DoublyLinkedList& dll)
 {
-    /* Complete this function */
-    //TODO: Finish this
+    int count = 0;
+    DListNode *current = dll.getFirst();
+    while(current != dll.getAfterLast()) // run to end of the list
+    {
+        count++; // counts number of nodes in the list
+        current = current->next;
+    }
+    return count;
 }
 
 // output operator
@@ -242,3 +262,23 @@ ostream& operator<<(ostream& out, const DoublyLinkedList& dll) // TODO: test thi
   
   return out;
 }
+
+/*DoublyLinkedList& find(const DoublyLinkedList dll, int findObj) // returns a specific node to insert in the middle of th list
+{
+    DListNode *current = dll.getFirst();
+    while(current != dll.getAfterLast())
+    {
+        if(current->obj = findObj) // if we find what we are looking for, return the node's pointer
+        {
+            return current;
+        }
+
+        current = current->next; // increments through the list
+
+        if(current == dll.getAfterLast())
+        {
+            DListNode *NodeNotFound = new DListNode(-99999);
+            return NodeNotFound;
+        }
+    }
+}*/
