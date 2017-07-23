@@ -9,14 +9,16 @@ int main () {
   
   // Insert 10 nodes at back with value 10,20,30,..,100
   cout << "Insert 10 nodes at back with value 10,20,30,..,100" << endl;
-  for (int i=10;i<=100;i+=10) {
+  for (int i = 10; i <= 100; i+= 10)
+  {
     dll.insertLast(i);
   }
   cout << "list: " << dll << endl << endl;
 
   // Insert 10 nodes at front with value 10,20,30,..,100
   cout << "Insert 10 nodes at front with value 10,20,30,..,100" << endl;
-  for (int i=10;i<=100;i+=10) {
+  for (int i = 10; i <= 100; i += 10)
+  {
     dll.insertFirst(i);
   }
   cout << "list: " << dll << endl << endl;
@@ -29,19 +31,21 @@ int main () {
   // Assign to another new list
   cout << "Assign to another new list" << endl;
   DoublyLinkedList dll3;
-  dll3=dll;
+  dll3 = dll;
   cout << "list3: " << dll3 << endl << endl;
   
   // Delete the last 10 nodes
   cout << "Delete the last 10 nodes" << endl;
-  for (int i=0;i<10;i++) {
+  for (int i = 0; i < 10 ; i++)
+  {
     dll.removeLast();
   }
   cout << "list: " << dll << endl << endl;
   
   // Delete the first 10 nodes
   cout << "Delete the first 10 nodes" << endl;
-  for (int i=0;i<10;i++) {
+  for (int i = 0; i < 10; i++)
+  {
     dll.removeFirst();
   }
   cout << "list: " << dll << endl << endl;
