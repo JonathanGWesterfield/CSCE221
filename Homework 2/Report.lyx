@@ -1446,6 +1446,51 @@ Best runtime:
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+Recurrence relation of Merge sort: 
+\begin_inset Formula $T(n)=2T(\frac{n}{2})+cn$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solving the relation using Master Theorem: 
+\begin_inset Formula $a=2$
+\end_inset
+
+, 
+\begin_inset Formula $b=2$
+\end_inset
+
+, 
+\begin_inset Formula $c=c$
+\end_inset
+
+, 
+\begin_inset Formula $d=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By using masters theorem, we determine that since 
+\begin_inset Formula $a=b^{d}$
+\end_inset
+
+ since 
+\begin_inset Formula $2=2^{1}$
+\end_inset
+
+.
+ Therefore the function has a run time of 
+\begin_inset Formula $O(nlogn).$
+\end_inset
+
+
 \begin_inset VSpace defskip
 \end_inset
 
@@ -1470,12 +1515,21 @@ Best runtime:
 \begin_deeper
 \begin_layout Enumerate
 A subtree of a red-black tree is itself a red-black tree.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+This is true.
+ A red-black tree is essentially a self balancing binary tree.
+ Therefore, a subtree of a red-black tree would be a self balanced tree
+ - a red-black tree.
 \begin_inset VSpace 0.5in
 \end_inset
 
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 The sibling of an external node is either external or it is red.
 \begin_inset VSpace 0.5in

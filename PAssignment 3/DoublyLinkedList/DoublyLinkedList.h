@@ -64,4 +64,4 @@ public:
 ostream& operator<<(ostream& out, const DoublyLinkedList& dll);
 // return the list length
 int DoublyLinkedListLength(DoublyLinkedList& dll);
-DoublyLinkedList& find(DoublyLinkedList dll, int findObj);
+DListNode* find(DoublyLinkedList dll, int findObj);

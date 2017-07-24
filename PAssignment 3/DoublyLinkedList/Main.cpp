@@ -56,6 +56,10 @@ int main ()
     cout << "list2: " << dll2 << endl;
     cout << "list3: " << dll3 << endl;
 
+    // more testing...
+    // add tests for insertAfter, insertBefore
+    // add tests for removeAfter, removeBefore
+    // add tests for DoublyLinkedListLength
 
     cout << endl << "\n\nFurther Testing for the insertAfter/Before() functions" << endl << endl;
 
@@ -67,14 +71,10 @@ int main ()
     }
     cout << "list: " << dll << endl << endl;
 
-    // dll.insertAfter(find(dll, 30), 69);
+    dll.insertBefore(*(find(dll, 30)), 69);
 
+    cout << "list: " << dll << endl << endl;
 
-
-    // more testing...
-    // add tests for insertAfter, insertBefore
-    // add tests for removeAfter, removeBefore
-    // add tests for DoublyLinkedListLength
 
     return 0;
 }

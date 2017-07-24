@@ -185,9 +185,13 @@ void DoublyLinkedList::insertAfter(DListNode &p, int newObj)
         insertLast(newObj);
         return;
     }
-    DListNode *newNode = new DListNode(newObj, &p, p.next);
-    p.next->prev = newNode; // sets the next nodes prev to the new node
-    p.next = newNode; // sets p's next node to the new node
+
+    DListNode *newNode = new DListNode(newObj, p.prev->next, p.prev);
+    p.prev->next = newNode;
+    p.prev = newNode;
+    cout << "Inserting " << newObj << " after " << p.obj << " was attempted." << endl << endl;
+    return;
+
     // TODO: Test if this works
 }
 
@@ -200,11 +204,11 @@ void DoublyLinkedList::insertBefore(DListNode &p, int newObj)
         return;
     }
 
-    DListNode *newNode = new DListNode(newObj, p.prev, &p);
+    DListNode *newNode = new DListNode(newObj, p.prev->next, p.prev);
     p.prev->next = newNode;
     p.prev = newNode;
 
-
+    return;
     //TODO: test this
 }
 
@@ -263,13 +267,14 @@ ostream& operator<<(ostream& out, const DoublyLinkedList& dll) // TODO: test thi
   return out;
 }
 
-/*DoublyLinkedList& find(const DoublyLinkedList dll, int findObj) // returns a specific node to insert in the middle of th list
+DListNode* find(const DoublyLinkedList dll, int findObj) // returns a specific node to insert in the middle of th list
 {
     DListNode *current = dll.getFirst();
     while(current != dll.getAfterLast())
     {
         if(current->obj = findObj) // if we find what we are looking for, return the node's pointer
         {
+            cout << "We found " << current->obj << " when we were looking for " << findObj << endl << endl;
             return current;
         }
 
@@ -277,8 +282,9 @@ ostream& operator<<(ostream& out, const DoublyLinkedList& dll) // TODO: test thi
 
         if(current == dll.getAfterLast())
         {
+            cout << "We didn't find what we were looking for" << endl << endl;
             DListNode *NodeNotFound = new DListNode(-99999);
             return NodeNotFound;
         }
     }
-}*/
+}
