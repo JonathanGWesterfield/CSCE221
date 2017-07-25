@@ -184,11 +184,11 @@ void DoublyLinkedList::insertAfter(DListNode &p, int newObj)
     {
         insertLast(newObj);
         return;
-    }
+    } // TODO: remove these checks they are redundant
 
-    DListNode *newNode = new DListNode(newObj, p.prev->next, p.prev);
-    p.prev->next = newNode;
-    p.prev = newNode;
+    DListNode *newNode = new DListNode(newObj, &p, p.next);
+    p.next->prev = newNode;
+    p.next = newNode;
     cout << "Inserting " << newObj << " after " << p.obj << " was attempted." << endl << endl;
     return;
 
@@ -202,11 +202,13 @@ void DoublyLinkedList::insertBefore(DListNode &p, int newObj)
     {
         insertLast(newObj);
         return;
-    }
+    } // TODO: remove these checks they are redundant
 
-    DListNode *newNode = new DListNode(newObj, p.prev->next, p.prev);
+    DListNode *newNode = new DListNode(newObj, p.prev, &p);
     p.prev->next = newNode;
     p.prev = newNode;
+
+    cout << "Inserting " << newObj << " before " << p.obj << " was attempted." << endl << endl;
 
     return;
     //TODO: test this
@@ -215,14 +217,16 @@ void DoublyLinkedList::insertBefore(DListNode &p, int newObj)
 // remove the node after the node p
 void DoublyLinkedList::removeAfter(DListNode &p)
 {
-    DListNode *current = new DListNode();
-    current = &p; // goes to node p
+    DListNode *current = &p;
+    //current = &p; // goes to node p
     current = current->next; // moves to the node after p
     p.next = current->next; // sets p's next to the node after current
     current->next->prev = &p; // sets the node after current's prev to p
-    cout << "The node containing " << current->obj << ", after " << &p << " has been deleted. " << endl;
+    cout << "The node containing " << current->obj << ", after " << p.obj << " has been deleted. " << endl;
     delete current; // deletes the node after p
     current = NULL; // frees the dangling pointer
+
+    cout << "removing after " << p.obj << " was attempted." << endl << endl;
 
     //TODO: test this function
 }
@@ -230,14 +234,17 @@ void DoublyLinkedList::removeAfter(DListNode &p)
 // remove the node before the node p
 void DoublyLinkedList::removeBefore(DListNode &p)
 {
-    DListNode *current = new DListNode();
-    current = &p; // goes to node p
+    DListNode *current = &p;
+    //current = &p; // goes to node p
     current = current->prev; // moves to the node before p
     p.prev = current->prev;
     current->prev->next = &p;
-    cout << "The node containing " << current->obj << ", before" << &p << " has been deleted. " << endl;
+    cout << "The node containing " << current->obj << ", before " << p.obj << " has been deleted. " << endl;
     delete current; // deletes the node after p
     current = NULL; // frees the dangling pointer
+
+    cout << "removing before " << p.obj << " was attempted." << endl << endl;
+
     //TODO: Finish this
 }
 

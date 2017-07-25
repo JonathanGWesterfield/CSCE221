@@ -71,8 +71,22 @@ int main ()
     }
     cout << "list: " << dll << endl << endl;
 
-    dll.insertBefore(*(find(dll, 30)), 69);
+    DListNode *current = dll.getFirst();
+    while(current->obj != 30)
+    {
+        current = current->next;
+    }
 
+    dll.insertAfter(*current, 69);
+    cout << "list: " << dll << endl << endl;
+
+    dll.insertBefore(*current, 69);
+    cout << "list: " << dll << endl << endl;
+
+    dll.removeAfter(*current);
+    cout << "list: " << dll << endl << endl;
+
+    dll.removeBefore(*current);
     cout << "list: " << dll << endl << endl;
 
 
