@@ -65,7 +65,7 @@ int main ()
 
     // Insert 10 nodes at back with value 10,20,30,..,100
     cout << "Insert 10 nodes at back with value 10,20,30,..,100" << endl;
-    for (int i = 10; i <= 100; i+= 10)
+    for (int i = 10; i <= 100; i += 10)
     {
         dll.insertLast(i);
     }
@@ -77,18 +77,25 @@ int main ()
         current = current->next;
     }
 
+    // inserts 69 after 30
+    cout << "Inserting 69 AFTER 30" << endl;
     dll.insertAfter(*current, 69);
     cout << "list: " << dll << endl << endl;
 
+    // inserts 69 before 30
+    cout << "Inserting 69 BEFORE 30" << endl;
     dll.insertBefore(*current, 69);
     cout << "list: " << dll << endl << endl;
 
+    // removes 69 after 30
+    cout << "Removing 69 AFTER 30" << endl;
     dll.removeAfter(*current);
     cout << "list: " << dll << endl << endl;
 
+    // removes 69 before 30
+    cout << "Removing 69 BEFORE 30" << endl;
     dll.removeBefore(*current);
     cout << "list: " << dll << endl << endl;
-
 
     return 0;
 }

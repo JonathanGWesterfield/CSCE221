@@ -180,72 +180,90 @@ int DoublyLinkedList::last() const
 // insert the new object after the node p
 void DoublyLinkedList::insertAfter(DListNode &p, int newObj)
 {
-    if(p.next == &tail) // for if this is the last element for some reason
+    if(p.next == &tail) // redundant but oh well
     {
         insertLast(newObj);
         return;
-    } // TODO: remove these checks they are redundant
+    }
+    if(&p == &tail)
+    {
+        throw EmptyDLinkedListException("Can't insert past the tail in the list\nFunction: insertAfter()");
+    }
 
     DListNode *newNode = new DListNode(newObj, &p, p.next);
-    p.next->prev = newNode;
-    p.next = newNode;
-    cout << "Inserting " << newObj << " after " << p.obj << " was attempted." << endl << endl;
-    return;
-
+    p.next->prev = newNode; // sets the next nodes prev to the new node
+    p.next = newNode; // sets p's next node to the new node
     // TODO: Test if this works
 }
 
 // insert the new object before the node p
 void DoublyLinkedList::insertBefore(DListNode &p, int newObj)
 {
-    if(p.next == &tail) // for if this is the last element for some reason
+    if(p.prev == &head) // redundant but oh well
     {
-        insertLast(newObj);
+        insertFirst(newObj);
         return;
-    } // TODO: remove these checks they are redundant
+    }
+    if(&p == &head)
+    {
+        throw EmptyDLinkedListException("Can't insert before the head in the list\nFunction: insertBefore()");
+    }
 
     DListNode *newNode = new DListNode(newObj, p.prev, &p);
     p.prev->next = newNode;
     p.prev = newNode;
-
-    cout << "Inserting " << newObj << " before " << p.obj << " was attempted." << endl << endl;
-
-    return;
-    //TODO: test this
 }
 
 // remove the node after the node p
 void DoublyLinkedList::removeAfter(DListNode &p)
 {
-    DListNode *current = &p;
-    //current = &p; // goes to node p
+    if(isEmpty())
+    {
+        throw EmptyDLinkedListException("List is empty\nFunction: removeAfter()");
+    }
+    if(&p == &tail)
+    {
+        throw EmptyDLinkedListException("Can't remove past the tail in the list\nFunction: removeAfter()");
+    }
+    if(p.next == &tail) // for if this is the last element for some reason
+    {
+        throw EmptyDLinkedListException("Can't remove the tail in the list\nFunction: removeAfter()");
+    }
+
+    DListNode *current = new DListNode();
+    current = &p; // goes to node p
     current = current->next; // moves to the node after p
     p.next = current->next; // sets p's next to the node after current
     current->next->prev = &p; // sets the node after current's prev to p
-    cout << "The node containing " << current->obj << ", after " << p.obj << " has been deleted. " << endl;
+    cout << "The node containing " << current->obj << ", after " << &p << " has been deleted. " << endl;
     delete current; // deletes the node after p
     current = NULL; // frees the dangling pointer
-
-    cout << "removing after " << p.obj << " was attempted." << endl << endl;
-
-    //TODO: test this function
 }
 
 // remove the node before the node p
 void DoublyLinkedList::removeBefore(DListNode &p)
 {
-    DListNode *current = &p;
-    //current = &p; // goes to node p
+    if(isEmpty())
+    {
+        throw EmptyDLinkedListException("List is empty\nFunction: removeBefore()");
+    }
+    if(&p == &head)
+    {
+        throw EmptyDLinkedListException("Can't remove before the head in the list\nFunction: removeBefore()");
+    }
+    if(p.prev == &head) // for if this is the last element for some reason
+    {
+        throw EmptyDLinkedListException("Can't remove the head in the list\nFunction: removeBefore()");
+    }
+
+    DListNode *current = new DListNode();
+    current = &p; // goes to node p
     current = current->prev; // moves to the node before p
     p.prev = current->prev;
     current->prev->next = &p;
-    cout << "The node containing " << current->obj << ", before " << p.obj << " has been deleted. " << endl;
+    cout << "The node containing " << current->obj << ", before" << &p << " has been deleted. " << endl;
     delete current; // deletes the node after p
     current = NULL; // frees the dangling pointer
-
-    cout << "removing before " << p.obj << " was attempted." << endl << endl;
-
-    //TODO: Finish this
 }
 
 // return the list length
