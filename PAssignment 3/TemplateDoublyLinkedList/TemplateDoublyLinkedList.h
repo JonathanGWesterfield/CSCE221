@@ -37,9 +37,9 @@ public:
         head.next = &tail;
         tail.prev = &head;
     }
-    TemplateDoublyLinkedList(const TemplateDoublyLinkedList& dll); // copy constructor
+    TemplateDoublyLinkedList(const TemplateDoublyLinkedList<T>& dll); // copy constructor
     ~TemplateDoublyLinkedList(); // destructor
-    TemplateDoublyLinkedList& operator=(const TemplateDoublyLinkedList& dll); // assignment operator
+    TemplateDoublyLinkedList& operator=(const TemplateDoublyLinkedList<T>& dll); // assignment operator
     // return the pointer to the first node
     DListNode<T> *getFirst() const
     {
@@ -55,17 +55,17 @@ public:
     {
         return head.next == &tail;
     }
-    T first() const; // return the first object
-    T last() const; // return the last object
+    // T first() const; // return the first object
+    // T last() const; // return the last object
     void insertFirst(T newobj); // insert to the first of the list
     T removeFirst(); // remove the first node
     void insertLast(T newobj); // insert to the last of the list
     T removeLast(); // remove the last node
-    void insertAfter(DListNode<T> &p, T newobj);
+    /*void insertAfter(DListNode<T> &p, T newobj);
     void insertBefore(DListNode<T> &p, T newobj);
     void removeAfter(DListNode<T> &p);
     void removeBefore(DListNode<T> &p);
-    bool isEmpty(); // checks if the linked list is empty
+    bool isEmpty(); // checks if the linked list is empty*/
 
 };
 
@@ -89,7 +89,7 @@ template <class T> int TemplateDoublyLinkedListLength(TemplateDoublyLinkedList<T
 
 
 // extend range_error from <stdexcept>
-struct EmptyDLinkedListException : std::range_error {
+/*struct EmptyDLinkedListException : std::range_error {
     explicit EmptyDLinkedListException(char const* msg = NULL): range_error(msg) {}
 };
 
@@ -114,7 +114,7 @@ template <class T> TemplateDoublyLinkedList<T>& TemplateDoublyLinkedList<T>::ope
 {
     // Delete the whole list
 
-    /*while(!this->isEmpty()) // while this class isn't empty
+    while(!this->isEmpty()) // while this class isn't empty
     {
         this->removeLast();
     }
@@ -126,7 +126,7 @@ template <class T> TemplateDoublyLinkedList<T>& TemplateDoublyLinkedList<T>::ope
     // Performs a deep copy of the list
     // Initialize the list
     this -> head.next = &tail;
-    this -> tail.prev = &head;*/
+    this -> tail.prev = &head;
 
     DListNode<T> *current;
     // TODO: Something is wrong with this function it does not work
@@ -189,4 +189,4 @@ template <class T> T TemplateDoublyLinkedList<T>::removeFirst()
     current = NULL; // gets rid of the dangling pointer
 
     return obj; // returns what the deleted node had
-}
+}**/

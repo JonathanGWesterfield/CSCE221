@@ -252,59 +252,7 @@ Type of sources
 \begin_inset space ~
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
+Peer Teachers
 \begin_inset space ~
 \end_inset
 
@@ -586,7 +534,7 @@ People
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Lauren Kleckner
 \end_layout
 
 \end_inset
@@ -1113,7 +1061,7 @@ return(1 + countNodes(currentNode->next));
 \begin_layout LyX-Code
 \begin_inset Formula 
 \[
-Ra_{n}=a_{n-1}+1
+a_{n}=a_{n-1}+1
 \]
 
 \end_inset
@@ -1208,7 +1156,7 @@ return maxNum(x, lowIndex, highIndex - 1);
 \end_layout
 
 \begin_layout LyX-Code
-
+FINISH THIS QUESTION
 \end_layout
 
 \begin_layout LyX-Code
@@ -1411,6 +1359,15 @@ Best runtime:
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+FINISH THIS QUESTION FINISH THIS QUESTION FINISH THIS QUESTION FINISH THIS
+ QUESTION FINISH THIS QUESTION FINISH THIS QUESTION
+\begin_inset VSpace defskip
+\end_inset
+
+
 \begin_inset VSpace vfill
 \end_inset
 
@@ -1450,7 +1407,7 @@ Best runtime:
 
 \begin_layout Standard
 Recurrence relation of Merge sort: 
-\begin_inset Formula $T(n)=2T(\frac{n}{2})+cn$
+\begin_inset Formula $T(n)=2T(\frac{n}{2})+n$
 \end_inset
 
 
@@ -1466,7 +1423,7 @@ Solving the relation using Master Theorem:
 \end_inset
 
 , 
-\begin_inset Formula $c=c$
+\begin_inset Formula $c=1$
 \end_inset
 
 , 
@@ -1488,6 +1445,80 @@ By using masters theorem, we determine that since
 .
  Therefore the function has a run time of 
 \begin_inset Formula $O(nlogn).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also we can use the substitution method to solve the recurrence relation.
+\begin_inset Formula 
+\[
+T(n)=2T(\frac{n}{2})+n
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T(n)=2(2T(\frac{n}{4}))+2n
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T(n)=2(2(T(\frac{n}{8})))+3n
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T(n)=2^{k}T(\frac{n}{2^{k}})+kn
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+k=log_{2}n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{∴}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T(n)=2^{log_{2}n}T(1)+log_{2}(n)n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{∴}O(nlogn)
+\]
+
 \end_inset
 
 
@@ -1519,10 +1550,15 @@ A subtree of a red-black tree is itself a red-black tree.
 
 \begin_deeper
 \begin_layout Standard
-This is true.
- A red-black tree is essentially a self balancing binary tree.
- Therefore, a subtree of a red-black tree would be a self balanced tree
- - a red-black tree.
+This is false.
+ While a red black tree is a self balancing binary tree, the colors of the
+ nodes don't always alternate from level to level.
+ The condition for the colors of the nodes is that there are always the
+ same number of black nodes from the root to any nodes on the same level.
+ This means that it is possibly that the colors of one side of the tree
+ can be different than the other side of the tree.
+ Also, any subtree rooted at a red node cannot be a red-black tree because
+ this contradicts what makes a red black tree.
 \begin_inset VSpace 0.5in
 \end_inset
 
@@ -1532,22 +1568,55 @@ This is true.
 \end_deeper
 \begin_layout Enumerate
 The sibling of an external node is either external or it is red.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+This is true.
+ If an external node had a black internal sibling, then these 2 sibligns
+ woiuld not have the same black depth, which contradicts red-black trees
+ having all leaves be the same black depth.
 \begin_inset VSpace 0.5in
 \end_inset
 
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 There is a unique (2,4) tree associated with a given red-black tree.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+This is true.
+ When merging each black node with its red children, the combinations will
+ either form a 2, 3, or 4 node.
+ They fall into set configurations because the tree is being 
+\begin_inset Quotes eld
+\end_inset
+
+condensed
+\begin_inset Quotes erd
+\end_inset
+
+ in a way.
+ 
 \begin_inset VSpace 0.5in
 \end_inset
 
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 There is a unique red-black tree associated with a given (2,4) tree.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+This is false.
+ A (2,4) tree can have multiple red-black tree configurations.
 \begin_inset VSpace 0.5in
 \end_inset
 
@@ -1558,6 +1627,7 @@ There is a unique red-black tree associated with a given (2,4) tree.
 
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 (10 points) R-10.19 p.
@@ -1587,25 +1657,17 @@ There is a unique red-black tree associated with a given (2,4) tree.
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset VSpace 0.5in
-\end_inset
+\begin_inset Formula 
+\[
+h(T)=O(log_{2}n)=log_{2}(100,000)\text{≈}16
+\]
 
-
-\begin_inset VSpace 0.5in
 \end_inset
 
 
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate
-\begin_inset Formula $T$
-\end_inset
-
- is a (2,4) tree.
-\end_layout
-
-\begin_deeper
 \begin_layout Standard
 \begin_inset VSpace 0.5in
 \end_inset
@@ -1617,12 +1679,48 @@ There is a unique red-black tree associated with a given (2,4) tree.
 
 \end_layout
 
-\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ is a (2,4) tree.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h(T)=O(log_{2}n)=log_{2}(100,000)\text{≈}16
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.5in
+\end_inset
+
+
+\begin_inset VSpace 0.5in
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 \begin_inset Formula $T$
 \end_inset
 
  is a red-black tree.
+\begin_inset Formula 
+\[
+h(T)=O(log_{2}n)=log_{2}(100,000)\text{≈}16
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1645,7 +1743,17 @@ There is a unique red-black tree associated with a given (2,4) tree.
  is a binary search tree.
 \end_layout
 
-\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h(T)=O(n)=100,000
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset VSpace 0.5in
 \end_inset
@@ -1661,7 +1769,6 @@ There is a unique red-black tree associated with a given (2,4) tree.
 
 \end_layout
 
-\end_deeper
 \end_deeper
 \begin_layout Enumerate
 (10 points) R-9.16 p.

@@ -26,9 +26,11 @@
       <file leaf-file-name="TemplateMain.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TemplateMain.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="315">
+              <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -36,20 +38,15 @@
       <file leaf-file-name="TemplateDoublyLinkedList.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TemplateDoublyLinkedList.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="540">
+              <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
               <folding>
                 <element signature="e#183#201#0" expanded="true" />
                 <element signature="e#272#281#0" expanded="true" />
                 <element signature="e#357#366#0" expanded="true" />
                 <element signature="e#665#674#0" expanded="true" />
-                <element signature="e#2047#2056#0" expanded="true" />
-                <element signature="e#2167#2176#0" expanded="true" />
-                <element signature="e#2491#2500#0" expanded="true" />
-                <element signature="e#3055#3064#0" expanded="true" />
-                <element signature="e#4071#4080#0" expanded="true" />
-                <element signature="e#4660#4669#0" expanded="true" />
-                <element signature="e#5096#5105#0" expanded="true" />
+                <element signature="e#2063#2072#0" expanded="true" />
+                <element signature="e#2183#2192#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -294,16 +291,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500944890811</updated>
-      <workItem from="1500944891949" duration="2945000" />
+      <workItem from="1500944891949" duration="4026000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2945000" />
+    <option name="totallyTimeSpent" value="4026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-549" width="1080" height="1898" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495183" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -313,7 +309,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -344,28 +340,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TemplateMain.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="315">
+          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TemplateDoublyLinkedList.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="540">
+          <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
           <folding>
             <element signature="e#183#201#0" expanded="true" />
             <element signature="e#272#281#0" expanded="true" />
             <element signature="e#357#366#0" expanded="true" />
             <element signature="e#665#674#0" expanded="true" />
-            <element signature="e#2047#2056#0" expanded="true" />
-            <element signature="e#2167#2176#0" expanded="true" />
-            <element signature="e#2491#2500#0" expanded="true" />
-            <element signature="e#3055#3064#0" expanded="true" />
-            <element signature="e#4071#4080#0" expanded="true" />
-            <element signature="e#4660#4669#0" expanded="true" />
-            <element signature="e#5096#5105#0" expanded="true" />
+            <element signature="e#2063#2072#0" expanded="true" />
+            <element signature="e#2183#2192#0" expanded="true" />
           </folding>
         </state>
       </provider>
