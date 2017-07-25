@@ -1156,7 +1156,60 @@ return maxNum(x, lowIndex, highIndex - 1);
 \end_layout
 
 \begin_layout LyX-Code
-FINISH THIS QUESTION
+\begin_inset Formula 
+\[
+F(n)=F(n-1)+1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F(n-1)=F(n-2)+1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F(n-2)=F(n-3)+1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F(n-3)=F(n-4)+1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula 
+\[
+F(k)=F(n-(k-1))+1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula 
+\[
+F(1)=1
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout LyX-Code
@@ -1505,7 +1558,7 @@ k=log_{2}n
 
 \begin_inset Formula 
 \[
-T(n)=2^{log_{2}n}T(1)+log_{2}(n)n
+T(n)=2^{log_{2}n}T(1)+log_{2}(n)n=n*0+nlogn
 \]
 
 \end_inset
@@ -1659,7 +1712,7 @@ This is false.
 \begin_layout Standard
 \begin_inset Formula 
 \[
-h(T)=O(log_{2}n)=log_{2}(100,000)\text{≈}16
+h(T)=O(1.44logn)=log_{2}(100,000)\text{≈}23
 \]
 
 \end_inset
@@ -1715,7 +1768,7 @@ h(T)=O(log_{2}n)=log_{2}(100,000)\text{≈}16
  is a red-black tree.
 \begin_inset Formula 
 \[
-h(T)=O(log_{2}n)=log_{2}(100,000)\text{≈}16
+h(T)=O(2log_{2}n)=log_{2}(100,000)\text{≈}33
 \]
 
 \end_inset
