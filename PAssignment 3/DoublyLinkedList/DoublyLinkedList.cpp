@@ -14,7 +14,6 @@ DoublyLinkedList::DoublyLinkedList(const DoublyLinkedList& dll)
     this -> tail.prev = &head;
 
     DListNode *current;
-    // TODO: Something is wrong with this function it does not work
     current = dll.getFirst(); // sets traversing node to the first object in the list
 
     while(current != dll.getAfterLast()) // goes through the list and deep copies all elements
