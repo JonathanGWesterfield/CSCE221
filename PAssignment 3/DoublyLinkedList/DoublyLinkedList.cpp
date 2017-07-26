@@ -193,7 +193,7 @@ void DoublyLinkedList::insertAfter(DListNode &p, int newObj)
     p.next->prev = newNode; // sets the next nodes prev to the new node
     p.next = newNode; // sets p's next node to the new node
     // TODO: Test if this works
-}
+}3
 
 // insert the new object before the node p
 void DoublyLinkedList::insertBefore(DListNode &p, int newObj)

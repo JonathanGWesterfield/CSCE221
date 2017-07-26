@@ -1193,7 +1193,7 @@ F(n-3)=F(n-4)+1
 \begin_layout LyX-Code
 \begin_inset Formula 
 \[
-F(k)=F(n-(k-1))+1
+F(k)=F(n-(k-1))+kn
 \]
 
 \end_inset
@@ -1256,8 +1256,8 @@ O(n)
 \begin_layout Standard
 The stack data structure would be the best data structure to use for determining
  if a string is a palindrome.
- To do this, you would push the string onto the stack starting from the
- beginning of the string.
+ To do this, you would push the characters string onto the stack starting
+ from the beginning of the string.
  From there, you would pop off elements and compare those elements (which
  would be starting from the end of the string) to the elements at the beginning
  of the string.
@@ -1415,8 +1415,152 @@ Best runtime:
 \end_layout
 
 \begin_layout Standard
-FINISH THIS QUESTION FINISH THIS QUESTION FINISH THIS QUESTION FINISH THIS
- QUESTION FINISH THIS QUESTION FINISH THIS QUESTION
+Best case is when the list is sorted and the pivot is in the middle of the
+ list.
+ The recursive relation for the best case scenario is: 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T(n)=2T(\frac{n}{2})+n
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T(n)=2(2(\frac{n}{4})+\frac{n}{2})+n
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T(n)=2(2(2(\frac{n}{8})+\frac{n}{4}+\frac{n}{2})+n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{∴}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=2^{k}T(\frac{n}{2^{k}})+i*n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{∴}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=n*0+log_{2}n*n
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{\ensuremath{\therefore}}O(nlogn)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The average case for quick sort is anytime that isn't the best case or the
+ worst case and the recurrence relation is the same as the best case recurrence
+ relation.
+ The worst case scenario is when the list is either unsorted and the pivot
+ point is at either end of the list or the list is sorted in reverse order
+ and the pivot point is at the ends of the list.
+ The reccurence relation for the worst case scenario is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T(n)=T(n-1)+n
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T(n)=T(n-2)+(n-1)+n
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T(n)=T(n-3)+(n-2)+(n-1)+n
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+1+2+3+...+(n-3)+(n-2)+(n-1)+n\text{∴}Arithmetic
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{∴}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+T(n)=\frac{n(n+1)}{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{∴}O(n^{2})
+\]
+
+\end_inset
+
+
 \begin_inset VSpace defskip
 \end_inset
 
@@ -1848,9 +1992,32 @@ erase(
 \family default
 .
  Record your coin flips, as well.
+\begin_inset VSpace defskip
+\end_inset
+
+
 \end_layout
 
-\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename Screen Shot 2017-07-25 at 7.14.42 PM.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Screen Shot 2017-07-25 at 7.14.42 PM.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset VSpace 0.5in
 \end_inset
@@ -1869,6 +2036,5 @@ erase(
 
 \end_layout
 
-\end_deeper
 \end_body
 \end_document
