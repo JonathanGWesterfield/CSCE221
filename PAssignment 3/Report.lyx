@@ -1774,8 +1774,63 @@ The doubly linked list class is a linear doubly linked list with each node
  regular DoublyLinkedList class but is implemented using templates.
  This allows any data type to be stored in the linked list instead of just
  integer data types.
+ The assignment and ouptut operator are both 
+\begin_inset Formula $O(n)$
+\end_inset
+
+ because they must parse through the whole list in order to output every
+ element.
+ The copy constructor and the class destructor are also both 
+\begin_inset Formula $O(n)$
+\end_inset
+
+ because they must parse through the entire list to copy the list's nodes.
+ The insertBefore/After(), removeBefore/After(), insertFirst/Last(), and
+ first/last(), functions are all 
+\begin_inset Formula $O(n)$
+\end_inset
+
+ since they only have a set number of instructions to follow.
+ The test cases for both the DoublyLinkedList and TemplateDoublyLinkedList
+ class are below and based off of the test main class provided to us.
+\begin_inset VSpace defskip
+\end_inset
+
+
 \end_layout
 
+\begin_layout Enumerate
+Doubly Linked List Output
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename DLL Output.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Template Doubly Linked List Output
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename TemplateDLL Output.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Itemize
 Create a directory for the Part 2 that includes: 

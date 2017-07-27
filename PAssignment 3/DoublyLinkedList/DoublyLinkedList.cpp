@@ -28,19 +28,7 @@ DoublyLinkedList& DoublyLinkedList::operator=(const DoublyLinkedList& dll)
 {
   // Delete the whole list
 
-    /*while(!this->isEmpty()) // while this class isn't empty
-    {
-        this->removeLast();
-    }
-    head = 0;
-    tail = 0;
-    head.next = &tail;
-    tail.prev = &head; // sets the list to empty by pointing the ends at each other
-
-    // Performs a deep copy of the list
-    // Initialize the list
-    this -> head.next = &tail;
-    this -> tail.prev = &head;*/
+    this->~DoublyLinkedList();
 
     DListNode *current;
     // TODO: Something is wrong with this function it does not work
@@ -193,7 +181,7 @@ void DoublyLinkedList::insertAfter(DListNode &p, int newObj)
     p.next->prev = newNode; // sets the next nodes prev to the new node
     p.next = newNode; // sets p's next node to the new node
     // TODO: Test if this works
-}3
+}
 
 // insert the new object before the node p
 void DoublyLinkedList::insertBefore(DListNode &p, int newObj)

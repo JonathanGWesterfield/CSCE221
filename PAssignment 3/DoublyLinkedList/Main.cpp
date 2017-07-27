@@ -76,7 +76,6 @@ int main ()
     {
         current = current->next;
     }
-
     // inserts 69 after 30
     cout << "Inserting 69 AFTER 30" << endl;
     dll.insertAfter(*current, 69);
