@@ -1861,7 +1861,7 @@ The MinQueue class was implemented using the TemplatedDoublyLinkedList class.
  the MinQueue class also uses templates to support any data type that gets
  fed into it.
  The enqueue(), dequeue(), size(), and isEmpty() functions are all 
-\begin_inset Formula $O(n)$
+\begin_inset Formula $O(1)$
 \end_inset
 
 .
