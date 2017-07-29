@@ -309,67 +309,7 @@ Type of sources
 \begin_inset space ~
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
+Peer Teacher
 \begin_inset space ~
 \end_inset
 
@@ -756,7 +696,7 @@ People
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Lauren Kleckner
 \end_layout
 
 \end_inset
@@ -1751,6 +1691,23 @@ ion, complexity analysis of code expressed in terms of big-O, and the test
 
 \begin_layout Part
 Report for DoublyLinkedList
+\end_layout
+
+\begin_layout Enumerate
+To compile the DoublyLinkedList: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+navigate to the folder Submission/Part 1/DoublyLinkedList 
+\end_layout
+
+\begin_layout Enumerate
+Use the command <g++ -std=c++11 *.cpp -o main>
+\end_layout
+
+\begin_layout Enumerate
+Then type <./main> into the terminal to run 
 \begin_inset VSpace defskip
 \end_inset
 
@@ -1761,6 +1718,25 @@ Report for DoublyLinkedList
 
 \end_layout
 
+\end_deeper
+\begin_layout Enumerate
+To compile TemplateDoublyLinkedList: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+navigate to the folder Submission/Part 1/TemplateDoublyLinkedList 
+\end_layout
+
+\begin_layout Enumerate
+Use the command <g++ -std=c++11 *.cpp -o main>
+\end_layout
+
+\begin_layout Enumerate
+Then type <./main> into the terminal to run 
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Implementation
 \end_layout
@@ -1851,6 +1827,24 @@ MinQueue
 \end_layout
 
 \begin_layout Enumerate
+To compile: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+navigate to the folder Submission/Part 2/MinQueue
+\end_layout
+
+\begin_layout Enumerate
+Use the command <g++ -std=c++11 *.cpp -o main>
+\end_layout
+
+\begin_layout Enumerate
+Then type <./main> into the terminal to run 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
 Implementation
 \end_layout
 
@@ -1865,6 +1859,8 @@ The MinQueue class was implemented using the TemplatedDoublyLinkedList class.
 \end_inset
 
 .
+ This is because all of these functions pretty much take 1 to 4 operations
+ to finish the function.
  The min function is 
 \begin_inset Formula $O(n)$
 \end_inset
@@ -1873,6 +1869,22 @@ The MinQueue class was implemented using the TemplatedDoublyLinkedList class.
  and find the min.
 \end_layout
 
+\begin_layout Enumerate
+MinQueue output
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename MinQueue Output.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Itemize
 Make a tar file that contains the Part 1 and Part 2 directories and submit
