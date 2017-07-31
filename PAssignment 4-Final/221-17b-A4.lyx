@@ -1,0 +1,656 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options false
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "helvet" "default"
+\font_typewriter "courier" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 0.01in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size larger
+CPSC 221 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Final Project
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+due Monday, August 6 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size large
+\color black
+Problem description
+\size default
+\color inherit
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Find a path from the entrance to the exit in a maze that consists of rooms
+ connected by doors.
+ Each room is enumerated by consecutive integers, from 
+\begin_inset Formula $0$
+\end_inset
+
+ to 
+\begin_inset Formula $n^{2}-1$
+\end_inset
+
+, and it can have no more than 
+\begin_inset Formula $4$
+\end_inset
+
+ doors oriented to 
+\emph on
+North
+\emph default
+, 
+\emph on
+South
+\emph default
+, 
+\emph on
+East
+\emph default
+ or 
+\emph on
+West
+\emph default
+.
+ The entry to the maze starts at the room 
+\begin_inset Formula $0$
+\end_inset
+
+ and ends at the room 
+\begin_inset Formula $n^{2}-1$
+\end_inset
+
+.
+ The maze can be modeled by an undirected graph, where a vertex corresponds
+ to a room and an edge corresponds to a door, see the maze below with the
+ path and the corresponding graph for the maze.
+  
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename maze.eps
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Use an adjacency linked list or adjacency matrix to represent the graph
+ for this problem.
+ 
+\end_layout
+
+\begin_layout Itemize
+Design an algorithm to find a path from the entrance to the the exit of
+ the maze.
+ 
+\end_layout
+
+\begin_layout Itemize
+Display the graph in the text format, use zero to denote a vertex (room)
+ on the entry-exit path and x otherwise.
+ Provide the length of the path.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+o
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+o
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+o
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+o
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+o
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+o
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+o
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+o
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+o
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The length of the path above is 
+\begin_inset Formula $8$
+\end_inset
+
+ which is the number of the graph edges (doors to open) to reach the Exit.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Programming instructions: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Demonstrate a good C++ programming style; for more details, see the 
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "http://www.stroustrup.com/Programming/PPP-style.pdf"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Load the graph data from an input file.
+ Your program should be able to read graph data from any user file (e.g.
+ ask about the file name, or get it from a command line argument).
+ The format of the graph data file is given below (the comments here are
+ for explanation only and should not be in the actual data file):
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+— © Teresa Leyk
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+16  /*
+\size default
+ 
+\size small
+the number of rooms
+\size default
+ */
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+/
+\size small
+*
+\size default
+ 
+\size small
+doors listed in order: north, east, south, west for each room: 0 = no doors
+ */
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+0 1 0 0 
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+0 1 1 1 
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+0 1 1 1 
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+0 0 0 1 
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+0 1 0 0
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+1 0 1 1
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+1 0 1 0
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+0 0 1 0
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+0 1 1 0
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+1 0 0 1
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+1 1 0 0
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+1 0 0 1
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+1 1 0 0
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+0 1 0 1
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+0 1 0 1
+\end_layout
+
+\begin_layout LyX-Code
+
+\shape smallcaps
+\size small
+0 0 0 1
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Use an adjacency list to organize the input data as a graph.
+ 
+\end_layout
+
+\begin_layout Itemize
+Implement an algorithm that finds the entry-exit path.
+\end_layout
+
+\begin_layout Itemize
+Implement a function that displays the path.
+\end_layout
+
+\begin_layout Itemize
+Create a menu that includes the following options:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Print the adjacency list for a given graph.
+\end_layout
+
+\begin_layout Itemize
+Find the length of the entry-exit path generated by your algorithm.
+\end_layout
+
+\begin_layout Itemize
+Print out all vertices (room numbers) on the entry-exit path.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Provide at least two test cases, each consisting of a maze data, an input
+ file and an output file in text format, to verify the correctness of your
+ program.
+\end_layout
+
+\begin_layout Itemize
+(Bonus: 10 points) Find all possible entry-exit paths and display them in
+ text format (as above).
+ Decide which one is the shortest path by providing the length for each
+ path.
+\end_layout
+
+\begin_layout Itemize
+Write a report that includes
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+data structures used to represent the graph and the graph operations.
+\end_layout
+
+\begin_layout Itemize
+your algorithm along with the theoretical analysis of its running time in
+ terms of Big-O asymptotic notation.
+ 
+\end_layout
+
+\begin_layout Itemize
+the test cases for verifying the correctness of your program.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Submit all source files and a PDF version of the report to eCampus by August
+ 6.
+ 
+\end_layout
+
+\begin_layout Itemize
+Submit a hard copy of the cover page, report and the source code.
+ Put your name, section number and user name in the header of the report
+ and the source file in the labs to your TA on August 7.
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+— © Teresa Leyk
+\end_layout
+
+\end_body
+\end_document
