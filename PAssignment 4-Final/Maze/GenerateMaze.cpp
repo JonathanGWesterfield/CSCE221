@@ -27,15 +27,15 @@ GenerateMaze::GenerateMaze(int size)
 
 GenerateMaze::~GenerateMaze() {} // destructor
 
-void GenerateMaze::setEmptyMaze()
+/*void GenerateMaze::setEmptyMaze()
 {
     vector<vector<mazeNode>> tempMaze(mazeSize, vector<mazeNode>(mazeSize, mazeNode()));
     maze = tempMaze;
-}
+}*/
 
 void GenerateMaze::setMaze()
 {
-    cerr << "Maze size: " << mazeSize << endl;
+    int count = 0;
     for (int i = 0; i < mazeSize; i++)
     {
         vector<mazeNode> row;
@@ -43,10 +43,11 @@ void GenerateMaze::setMaze()
         for (int j = 0; j < mazeSize; j++)
         {
             cout << "new mazeNode will be created at " << i << " " << j << endl;
-            mazeNode node = mazeNode();
+            mazeNode node = mazeNode(count);
             cout << "new mazeNode has been created at " << i << " " << j << endl;
             row.push_back(node);
             cout << "new mazeNode has been inserted at " << i << " " << j << endl << endl;
+            count++;
         }
         maze.push_back(row);
         cout << "row has been inserted into maze " << i << " time(s)" << endl << endl;
@@ -62,6 +63,7 @@ void GenerateMaze::outputMaze()
     {
         for(int j = 0; j < mazeSize; j++)
         {
+            cout << maze[i][j].number << " ";
             cout << maze[i][j].north << " " << maze[i][j].east << " " << maze[i][j].south <<
                  " " << maze[i][j].north << endl;
         }

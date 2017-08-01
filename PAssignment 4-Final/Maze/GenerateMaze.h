@@ -14,9 +14,10 @@ using namespace std;
 
 struct mazeNode
 {
-    int north, south, east, west;
-    mazeNode()
+    int number, north, south, east, west;
+    mazeNode(int count)
     {
+        number = count;
         north = generateRand();
         south = generateRand();
         east = generateRand();
