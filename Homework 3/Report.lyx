@@ -1656,7 +1656,23 @@ Code for each character: // TODO: PUT THE PICTURE OF THE TREE FROM MY PHONE
 
 \end_deeper
 \begin_layout Enumerate
-// PUT COMPRESSION HERE
+The original length of the string in ASCII code would have made the string
+ 264 bits long.
+ With the Huffman compression, our Huffman code comes to: 1110001000101111101110
+00110001001110101111111010111010000011011101111100100111000001000001101111.
+ The length of this code is 96 bits long, giving us a compression ratrio
+ of about 4:11.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset VSpace defskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
