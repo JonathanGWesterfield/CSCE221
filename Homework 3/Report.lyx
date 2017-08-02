@@ -1456,6 +1456,16 @@ What is the result of Exercise R-9.7, when collisions are handled by double
 \end_inset
 
 ?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Assignment Pictures/Double Hashed.png
+	scale 80
+
+\end_inset
+
+
 \begin_inset VSpace vfill
 \end_inset
 
@@ -1508,6 +1518,38 @@ Extract the event with smallest time-stamp (that is, determine the next
 Which data structure should be used for the above operations? Why? Provide
  big-oh asymptotic notation for each operation.
  
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+We use a heap to do this.
+ This is because a min Heap will always have the minimum (smallest) time
+ stamp located at the top of the heap.
+ This gives inserting an element a runtime of 
+\begin_inset Formula $O(logn)$
+\end_inset
+
+.
+ If we just wanted to see the value of the smallest time stamp, the runtime
+ complextiy would be 
+\begin_inset Formula $O(1)$
+\end_inset
+
+ because the value would be at the top of the tree.
+ However, for extracting the smallest time stamp and removing that node
+ from the tree, the runtime of this operation would be 
+\begin_inset Formula $O(logn)$
+\end_inset
+
+.
+ This is because after we get the minimum value, we take it out of the tree
+ and have to restructure the tree.
+\end_layout
+
+\begin_layout Standard
 \begin_inset VSpace vfill
 \end_inset
 
@@ -1547,6 +1589,76 @@ dogs do not spot hot pots or cats
 \family default
 .
  
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Frequency Array:
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset Graphics
+	filename Assignment Pictures/Frequency Array.png
+	scale 80
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Code for each character: 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename Assignment Pictures/Huffman Code.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+d
+\end_layout
+
+\begin_layout Standard
 \begin_inset VSpace vfill
 \end_inset
 
