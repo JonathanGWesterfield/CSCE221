@@ -3,5 +3,5 @@ project(Maze)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp GenerateMaze.cpp GenerateMaze.h)
+set(SOURCE_FILES main.cpp GenerateMaze.cpp GenerateMaze.h myGraph.cpp myGraph.h)
 add_executable(Maze ${SOURCE_FILES})
