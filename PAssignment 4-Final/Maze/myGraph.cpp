@@ -85,6 +85,7 @@ void myGraph::readInfo(std::string inputFile)
         }
     }
 
+    // prints out the Adjacency matrix
     for(int i = 0; i < adjMatrix.size(); i++)
     {
         for(int j = 0; j < adjMatrix[i].size(); j++)
@@ -107,19 +108,71 @@ void myGraph::setEmptyVisited()
 
 }
 
-void myGraph::depthFirstSearch(int i)
+bool myGraph::depthFirstSearch(int i)
 {
+    // gives the length of the path that it finds
+    ++pathLength; // counts the number of times this runs
     int j;
-    printf("\n%d",i);
+    pathRoomNumbers.push_back(i);
     visited[i] = 1;
+    printf("\n%d",i);
 
+    if(i == n - 1)
+    {
+        return true; // means the end of the maze was found
+    }
+
+    bool found = false;
     for(j = 0; j < n; j++)
     {
         if(!visited[j] && adjMatrix[i][j] == 1)
         {
-            depthFirstSearch(j);
+            if(depthFirstSearch(j))
+            {
+                found = true;
+                return found;
+            }
         }
     }
+
+    if(!found)
+    {
+        pathRoomNumbers.pop_back();
+    }
+
+    return found;
+}
+
+void myGraph::printAdjList()
+{
+    // prints out the Adjacency matrix
+    for(int i = 0; i < adjMatrix.size(); i++)
+    {
+        for(int j = 0; j < adjMatrix[i].size(); j++)
+        {
+            cout << adjMatrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << endl << endl;
+
+    return;
+}
+
+void myGraph::printPathLength()
+{
+    cout << "Entry-exit path length: " << pathRoomNumbers.size() << endl << endl << endl;
+    return;
+}
+
+void myGraph::printPath()
+{
+    cout << "All room numbers of the entry-exit path: " << endl;
+    for(int i = 0; i < pathRoomNumbers.size(); i++)
+    {
+        cout << pathRoomNumbers.at(i) << " ";
+    }
+    cout << endl << endl << endl;
 }
 
 
