@@ -94,6 +94,7 @@ void myGraph::readInfo(std::string inputFile)
         }
         cout << endl;
     }
+    cout << endl << "Finished readInfo()" << endl;
     cout << endl << endl;
 
     return;
@@ -105,7 +106,7 @@ void myGraph::setEmptyVisited()
     {
         visited.push_back(0);
     }
-
+    return;
 }
 
 bool myGraph::depthFirstSearch(int i)
@@ -141,6 +142,55 @@ bool myGraph::depthFirstSearch(int i)
     }
 
     return found;
+}
+
+void myGraph::printMaze()
+{
+    cout << "Attempting to print the maze" << endl << endl;
+    // initializes the maze with "empty" X elements
+    for(int i = 0; i < sqrt(n); i++)
+    {
+        vector<char> row;
+        for(int j = 0; j < sqrt(n); j++)
+        {
+            row.push_back('X');
+        }
+        charMaze.push_back(row);
+    }
+
+    // determines the path through the maze
+    int tracker = 0;
+    for(int i = 0; i < sqrt(n); i++)
+    {
+        vector<char> row;
+        for(int j = 0; j < sqrt(n); j++)
+        {
+            if(isFoundFromPath(tracker))
+                charMaze[i][j] = 'O';
+            tracker++;
+        }
+    }
+
+    // prints out the text maze
+    for(int i = 0; i < sqrt(n); i++)
+    {
+        for(int j = 0; j < sqrt(n); j++)
+        {
+            cout << charMaze[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
+bool myGraph::isFoundFromPath(int tracker)
+{
+    for(int i = 0; i < pathRoomNumbers.size(); i++)
+    {
+        if(tracker == pathRoomNumbers[i])
+            return true;
+    }
+
+    return false;
 }
 
 void myGraph::printAdjList()

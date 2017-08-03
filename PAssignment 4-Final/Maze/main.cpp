@@ -5,9 +5,13 @@
 int main()
 {
     myGraph graph;
-    graph.readInfo("/Users/JonathanWesterfield/Documents/CSCE 221/PAssignment 4-Final/Maze/mazeInput.txt");
+    graph.readInfo("/Users/JonathanWesterfield/Documents/CSCE 221/PAssignment 4-Final/Maze/mazeInput2.txt");
     graph.setEmptyVisited();
     graph.depthFirstSearch(0);
+
+    cout << endl << endl << endl;
+
+    graph.printMaze();
 
     cout << "\n\n\n\n\n\n\n\n" << endl;
 
@@ -27,6 +31,7 @@ int main()
         cin >> choice;
         cout << endl;
 
+        // takes the choice of the user and decides with a switch
         switch(choice)
         {
             case 1:
@@ -40,7 +45,7 @@ int main()
                 break;
             case 4:
                 cout << "EXITING PROGRAM " << endl;
-                exit = true;
+                exit = true; // signals need for exit
                 break;
             default:
                 cout << "Input not recognized\nPlease try again\n\n" << endl;
