@@ -1,0 +1,34 @@
+Algorith ShortestPath(G, v)
+{
+	Initialize D[v]=0 and D[u] +inf for each vertex u != v
+	while Q is not empty do
+	{
+		// pull a new vertex u in
+		u=Q.removeMin()
+	}
+
+	if there is an edge from u to z, then check the distance to z and update is lesser distance is found.
+	if(edgeExists(u,z))
+	// apply relzation procedure on the edge (u,z)
+	if(D[u] + w((u,z)) < D[z]) then
+	{
+		D[z] = D[u] + w((u,z))
+	}
+
+	change to D[z] the key of vertex z in Q.
+	return the label of D[u] of each vertex u
+}
+
+Algorithm edgeExists(u,z)
+{
+	if and edge exists between a vertex u and vertex z, the element value at matrix[u][z] is 1 else 0.
+
+	if(matrix[u][z] == 1)
+	{
+		return true
+	}
+	else
+	{
+		return false
+	}
+}

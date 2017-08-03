@@ -1696,21 +1696,61 @@ The original length of the string in ASCII code would have made the string
 \begin_layout Enumerate
 (10 points) R-13.15, p.
  656
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename Assignment Pictures/Modified Dijikstra.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
 \begin_inset VSpace vfill
 \end_inset
 
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 (10 points) R-13.16, p.
  656
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename Assignment Pictures/R13.16.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
 \begin_inset VSpace vfill
 \end_inset
 
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 (10 points) R-13.17, p.
  656

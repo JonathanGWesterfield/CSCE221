@@ -1,0 +1,25 @@
+Algorithm ShortestPath(G,v)
+{
+	// the priority queue Que contains all vertices of the graph G using keys as the D labels.
+
+	while Que is not empty do:
+	{
+		// pull a new vetex u into the cloud
+		u = Que.removeMin()
+	}
+
+	for each vertex z next to u such that z in Que do:
+	{
+	 	as the distance matrix D[z] is updated, display the distance and the path
+	 	// apply relaxation procedure on the edge (u,z)
+
+	 	if(D[u] + w((u,z)) < D[z]) then:
+	 	{
+	 	D[z] = D[u] + w((u,z))
+
+	 	print Distance ffrom v to u is dist[i]
+
+	 	print Path from v to u is v -> z -> u
+	 	}
+	}
+}
