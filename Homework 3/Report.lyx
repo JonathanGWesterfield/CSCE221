@@ -1460,7 +1460,7 @@ What is the result of Exercise R-9.7, when collisions are handled by double
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename Assignment Pictures/Double Hashed.png
+	filename Assignment Pictures/Correct Secondary Hash.png
 	scale 80
 
 \end_inset
@@ -1550,7 +1550,11 @@ We use a heap to do this.
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace vfill
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -1657,7 +1661,7 @@ Code for each character:
 \begin_inset VSpace defskip
 \end_inset
 
-
+3
 \begin_inset VSpace defskip
 \end_inset
 
@@ -1668,23 +1672,31 @@ Code for each character:
 \begin_layout Enumerate
 The original length of the string in ASCII code would have made the string
  264 bits long.
- With the Huffman compression, our Huffman code comes to: 1110001000101111101110
-00110001001110101111111010111010000011011101111100100111000001000001101111.
- The length of this code is 96 bits long, giving us a compression ratrio
+ With the Huffman compression, our Huffman code comes to: THIS IS WRONG
+ LOOK UP HOW TO MAKE WITH A STACK AND QUEUE
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+11100010001011111011100011000100111010111111101011101000001101110111110010011100
+0001000001101111.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The length of this code is 96 bits long, giving us a compression ratrio
  of about 4:11.
 \begin_inset VSpace defskip
 \end_inset
 
 
-\end_layout
-
-\begin_layout Enumerate
 \begin_inset VSpace defskip
 \end_inset
 
 
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 \begin_inset VSpace vfill
 \end_inset

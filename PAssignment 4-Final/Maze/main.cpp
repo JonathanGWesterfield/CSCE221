@@ -4,8 +4,14 @@
 
 int main()
 {
+    //TODO: fix the file input operation-putting in the full string from input doesn't work
+    string inputFilename;
+    cout << "What is the name of the file you want to analyze (you might have to put the full path): ";
+    // cin >> inputFilename;
+
     myGraph graph;
-    graph.readInfo("/Users/JonathanWesterfield/Documents/CSCE 221/PAssignment 4-Final/Maze/mazeInput2.txt");
+    graph.readInfo("/Users/JonathanWesterfield/Documents/CSCE 221/PAssignment 4-Final/Maze/mazeInput.txt");
+    // graph.readInfo(inputFilename);
     graph.setEmptyVisited();
     graph.depthFirstSearch(0);
 
