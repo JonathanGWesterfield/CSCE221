@@ -17,7 +17,7 @@ Algorithm ShortestPath(G,v)
 	 	{
 	 	D[z] = D[u] + w((u,z))
 
-	 	print Distance ffrom v to u is dist[i]
+	 	print Distance from v to u is dist[i]
 
 	 	print Path from v to u is v -> z -> u
 	 	}

@@ -1623,9 +1623,20 @@ Frequency Array:
 \end_layout
 
 \begin_layout Enumerate
-Code for each character: // TODO: PUT THE PICTURE OF THE TREE FROM MY PHONE
- ON HERE
+Code for each character: 
 \begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename Assignment Pictures/Problem 4.jpg
+	scale 13
+	rotateAngle 270
+
 \end_inset
 
 
@@ -1635,7 +1646,6 @@ Code for each character: // TODO: PUT THE PICTURE OF THE TREE FROM MY PHONE
 
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 \begin_inset Graphics
 	filename Assignment Pictures/Huffman Code.png
@@ -1754,13 +1764,31 @@ The original length of the string in ASCII code would have made the string
 \begin_layout Enumerate
 (10 points) R-13.17, p.
  656
-\begin_inset VSpace vfill
+\begin_inset VSpace defskip
 \end_inset
 
 
 \end_layout
 
 \begin_deeper
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename Assignment Pictures/Problem 7.jpg
+	scale 10
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 
 \size small
@@ -1779,30 +1807,125 @@ The original length of the string in ASCII code would have made the string
 \begin_layout Enumerate
 (10 points) R-13.31, p.
  657
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The algorithm begins from vertex A, discovers its neighbor B, followed by
+ B's neighbor D and so on.
+ The resulting depth-first search tree of the complete graph is a single
+ sided tree as shown before my drawn graph.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename Assignment Pictures/Problem 8.jpg
+	scale 12
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
 \begin_inset VSpace vfill
 \end_inset
 
 
 \end_layout
 
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
 (10 points) C-13.10, p.
  658
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Using Depth First Search, the dges of the graph will be discovered like
+ this: N1 -> N2 -> N3 -> N4 -> N5.
+ This would complete a path around the graph until there are no more paths
+ to follow.
+ However, if there are still edges of the graph that are untraveled, meaning
+ the number of edges traveled does not equal the number of edges in the
+ graph, then the algorithm backtracks to the nearest node with an edge undiscove
+red path.
+ From there, we travel that edge until we either run into the same problem
+ again or we reach the end of available edges and the number of traveled
+ edges equals the total number of edges in the graph.
+ This allows the paths previously found to be combined.
+ The graph would look similar to this N1 -> N2 -> N3 -> N4 -> N5 -> N6 ->
+ N7 -> N8.
+ The run time of this algorithm is 
+\begin_inset Formula $O(n+m)$
+\end_inset
+
+ as each edge is traversed at least once while discovering the path and
+ at most 
+\begin_inset Formula $m$
+\end_inset
+
+times the algorithm backtracks.
 \begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(10 points) C-13.15, p.
+ 659
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+From the graph below, Dijkstra's alorithm would compute an incorrect distance
+ from S to Z to be 4.
+ It wouldn't track the negative edge from X to Y which would create a distance
+ of 2 from S to Z instead of 4.
+ This is a weakness of Dijkstra's algorithm.
+ A negative weight edge fails when performing Dijkstra's algorithm.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset VSpace defskip
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
-(10 points) C-13.15, p.
- 659
+\begin_inset Graphics
+	filename Assignment Pictures/Problem 10.jpg
+	scale 12
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
 \begin_inset VSpace vfill
 \end_inset
 
 
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 
 \size small
