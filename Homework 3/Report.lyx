@@ -332,51 +332,7 @@ Type of sources
 \begin_inset space ~
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
+Peer Teacher
 \begin_inset space ~
 \end_inset
 
@@ -428,63 +384,7 @@ Type of sources
 \begin_inset space ~
 \end_inset
 
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
+Textbook
 \begin_inset space ~
 \end_inset
 
@@ -771,7 +671,7 @@ People
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Lauren Kleckner
 \end_layout
 
 \end_inset
@@ -968,7 +868,7 @@ Printed material
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Assigned Textbook 
 \end_layout
 
 \end_inset
@@ -1015,7 +915,7 @@ Printed material
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+for the class
 \end_layout
 
 \end_inset
@@ -1637,9 +1537,8 @@ Code for each character:
 \begin_deeper
 \begin_layout Enumerate
 \begin_inset Graphics
-	filename Assignment Pictures/Problem 4.jpg
+	filename Assignment Pictures/Correct Huffman Tree.jpg
 	scale 13
-	rotateAngle 270
 
 \end_inset
 
@@ -1652,7 +1551,7 @@ Code for each character:
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename Assignment Pictures/Huffman Code.png
+	filename Assignment Pictures/Correct Huffman Code.png
 	scale 60
 
 \end_inset
@@ -1661,7 +1560,7 @@ Code for each character:
 \begin_inset VSpace defskip
 \end_inset
 
-3
+
 \begin_inset VSpace defskip
 \end_inset
 
@@ -1672,20 +1571,18 @@ Code for each character:
 \begin_layout Enumerate
 The original length of the string in ASCII code would have made the string
  264 bits long.
- With the Huffman compression, our Huffman code comes to: THIS IS WRONG
- LOOK UP HOW TO MAKE WITH A STACK AND QUEUE
+ With the Huffman compression, our Huffman code comes to: 
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-11100010001011111011100011000100111010111111101011101000001101110111110010011100
-0001000001101111.
- 
+00101000010010111001010110100100111101010011100111100011100111100111001101011110
+010011100001000000110101
 \end_layout
 
 \begin_layout Enumerate
-The length of this code is 96 bits long, giving us a compression ratrio
- of about 4:11.
+The length of this code is 105 bits long, giving us a compression ratrio
+ of about 35:88 or a compression of about 39.7%.
 \begin_inset VSpace defskip
 \end_inset
 
