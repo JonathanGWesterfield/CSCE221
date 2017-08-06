@@ -52,6 +52,31 @@ void myGraph::readInfo(std::string inputFile)
     }
     cout << endl << endl;
 
+    // outputs the input file data to an ouptut file
+    output.open(outputFilename);
+    if(output.is_open())
+    {
+        cout << "Writing to output files " << endl;
+        // prints out the input from the file
+        for(int i = 0; i < inputInfo.size(); i++)
+        {
+            output << i << ": ";
+            for(int j = 0; j < inputInfo[i].size(); j++)
+            {
+                output << inputInfo[i][j] << " ";
+            }
+            output << endl;
+        }
+        output << endl << endl;
+    }
+    else
+    {
+        cout << endl << "OUTPUT FILE COULD NOT BE OPENED" << endl;
+        cout << "Function: readInfo()" << endl;
+        exit(EXIT_FAILURE);
+    }
+
+
     // creates the adjMatrix and fills it with zeros
     for(int i = 0; i < n; i++)
     {
@@ -85,7 +110,8 @@ void myGraph::readInfo(std::string inputFile)
         }
     }
 
-    // prints out the Adjacency matrix
+
+    /*// prints out the Adjacency matrix
     for(int i = 0; i < adjMatrix.size(); i++)
     {
         for(int j = 0; j < adjMatrix[i].size(); j++)
@@ -95,7 +121,29 @@ void myGraph::readInfo(std::string inputFile)
         cout << endl;
     }
     cout << endl << "Finished readInfo()" << endl;
-    cout << endl << endl;
+    cout << endl << endl;*/
+
+    // prints the adjacency list to the output
+    if(output.is_open())
+    {
+        output << "Adjacency Matrix: " << endl << endl;
+        for(int i = 0; i < adjMatrix.size(); i++)
+        {
+            for(int j = 0; j < adjMatrix[i].size(); j++)
+            {
+                output << adjMatrix[i][j] << " ";
+            }
+            output << endl;
+        }
+        output << endl << endl;
+    }
+    else
+    {
+        cout << endl << "OUTPUT FILE COULD NOT BE OPENED" << endl;
+        cout << "Function: readInfo()" << endl;
+        exit(EXIT_FAILURE);
+    }
+
 
     return;
 }
@@ -180,6 +228,29 @@ void myGraph::printMaze()
         }
         cout << endl;
     }
+
+    if(output.is_open())
+    {
+        output << "Solved Maze: " << endl << endl;
+        // prints to output file
+        for(int i = 0; i < sqrt(n); i++)
+        {
+            for(int j = 0; j < sqrt(n); j++)
+            {
+                output << charMaze[i][j] << " ";
+            }
+            output << endl;
+        }
+        output << endl << endl << endl;
+    }
+    else
+    {
+        cout << endl << "OUTPUT FILE COULD NOT BE OPENED" << endl;
+        cout << "Function: printMaze()" << endl;
+        exit(EXIT_FAILURE);
+    }
+
+    return;
 }
 
 bool myGraph::isFoundFromPath(int tracker)
@@ -193,7 +264,23 @@ bool myGraph::isFoundFromPath(int tracker)
     return false;
 }
 
-void myGraph::printAdjList()
+void myGraph::outputInfo()
+{
+    // prints the path and its length to the output file
+    if(output.is_open())
+    {
+        output << "All room numbers of the entry-exit path: " << endl;
+        for(int i = 0; i < pathRoomNumbers.size(); i++)
+        {
+            output << pathRoomNumbers.at(i) << " ";
+        }
+        output << endl << endl << endl;
+
+        output << "Path length: " << pathRoomNumbers.size() << endl << endl << endl;
+    }
+}
+
+void myGraph::printAdjMatrix()
 {
     // prints out the Adjacency matrix
     for(int i = 0; i < adjMatrix.size(); i++)

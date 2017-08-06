@@ -6,10 +6,13 @@
 #define MAZE_MYGRAPH_H
 
 #include <iostream>
+#include <fstream>>
 #include <vector>
 
 class myGraph
 {
+    std::string outputFilename = "MazeOutput.txt";
+    std::ofstream output;
     std::vector<std::vector<int> > inputInfo;
     std::vector<std::vector<int> > adjMatrix;
     std::vector<int> visited;
@@ -24,9 +27,10 @@ public:
     void setEmptyVisited();
     void printMaze();
     bool isFoundFromPath(int tracker);
-    void printAdjList();
+    void printAdjMatrix();
     void printPathLength();
     void printPath();
+    void outputInfo();
 
 };
 
