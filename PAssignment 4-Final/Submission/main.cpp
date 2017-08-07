@@ -1,5 +1,4 @@
 #include <iostream>
-#include "GenerateMaze.h"
 #include "myGraph.h"
 
 using namespace std;

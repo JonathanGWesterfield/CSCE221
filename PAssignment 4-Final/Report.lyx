@@ -1027,10 +1027,87 @@ Date
 \end_layout
 
 \begin_layout Part
-Data Strucutres Used to Represent the Graph and Graph Operations
+How to Compile and Run
 \end_layout
 
 \begin_layout Enumerate
+To compile, use <g++ -std=c++11 *.cpp -o main>.
+\end_layout
+
+\begin_layout Enumerate
+To run, use <./main>.
+\end_layout
+
+\begin_layout Enumerate
+The program will ask for a particular input file to run.
+ There are 2 input files:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The provided input file: 
+\begin_inset Quotes eld
+\end_inset
+
+inputMaze.txt
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The input file I created: 
+\begin_inset Quotes eld
+\end_inset
+
+inputMaze2.txt
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+WARNING: YOU MAY HAVE TO USE THE ABSOLUTE FILE PATH OF THE FILES TO MAKE
+ IT FUNCTION PROPERLY!!!
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+From there, the menu will pop up.
+ To choose items from the menu, input 1, 2, 3, or 4.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Choice 1 will output the adjacency matrix.
+\end_layout
+
+\begin_layout Itemize
+Choice 2 will print out the length of the path.
+\end_layout
+
+\begin_layout Itemize
+Choice 3 will print out the rooms traveled along the path to exit the maze.
+\end_layout
+
+\begin_layout Itemize
+Choice 4 will terminate the program.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The output file will automatically be generated upon typing in the input
+ file name.
+\end_layout
+
+\begin_layout Part
+Data Strucutres Used to Represent the Graph and Graph Operations
+\end_layout
+
+\begin_layout Standard
 First the input of the graph was read in a format of 4 digits.
  Each digit in the input represented a door for North, East, South, West
  respectively.
@@ -1224,6 +1301,50 @@ return found;
 
 \end_deeper
 \begin_layout Enumerate
+My implementation is a recursive implementation of the Depth First Search
+ algorithm.
+ The algorithm works by traversing the adjacency matrix.
+ The vector 
+\begin_inset Quotes eld
+\end_inset
+
+pathRoomNumbers
+\begin_inset Quotes erd
+\end_inset
+
+ is a vector that behaves like a stack.
+ The room that we are currently visiting is pushed onto the stack to keep
+ track of where we are.
+ We then use the 
+\begin_inset Quotes eld
+\end_inset
+
+visited
+\begin_inset Quotes erd
+\end_inset
+
+ vector in order to check that we have visited this particular vertex.
+ If we have reached the end of the maze 
+\begin_inset Formula $(n-1)$
+\end_inset
+
+, then we exit the function and return, which propogates back up the recursion.
+ We then use a for loop to traverse the adjacency matrix.
+ We make sure that the vertex we are in hasn't been visited and go to it.
+ The depthFirstSearch function is then called recursively until the end
+ of the maze is found.
+ The next part allows us to account for dead ends in the maze.
+ If there is a dead end, the pathRoomNumbers vector (implemented like a
+ stack) pops off the last element.
+ Since this is performed recursively, elements will continue to be popped
+ off the vector until a new potential path the end is found.
+ When the function is completely finished, the pathRoomNumbers will only
+ have the rooms that make up a successful path.
+ The length of the path can be found by simply finding the length of the
+ pathRoomNumbers vector.
+\end_layout
+
+\begin_layout Enumerate
 I initially used a depth first search alogorithm in order to find a path
  out of the maze.
  This was the simplest to implement and the most direct since its job is
@@ -1240,8 +1361,8 @@ I initially used a depth first search alogorithm in order to find a path
 \end_inset
 
 .
- While the maze may be of size 16, a 4x4 maze, the adacency list is of size
- 
+ While the maze may be of size 16, a 4x4 maze, the adjacency list is of
+ size 
 \begin_inset Formula $n^{2}$
 \end_inset
 
@@ -1262,20 +1383,144 @@ For testing, I used the maze that was already given to us and a maze that
  I constructed on my own.
  Unlike the maze provided to us, the maze I created has 2 exit paths of
  different lengths.
- My algorith was able to find a path through the maze.
- The output for the given maze is here:
+ My algorithm was able to find a path through the maze.
+ The output file for the given maze is here:
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+\begin_inset Graphics
+	filename Output Pictures/maze1Output.png
+	scale 60
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
 
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-s
+The output file for the second maze (my maze) is here: 
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename Output Pictures/maze2Output.png
+	scale 60
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The output for the program using the provided maze (with the menu) is here:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename Output Pictures/MazeTerminalOutput1.png
+	scale 45
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The output for the program using the maze I created (with the menu) is here:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Graphics
+	filename Output Pictures/MazeTerminalOutput2.png
+	scale 45
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Output Verification:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+As you can see from the output file for maze 1 (the provided maze), the
+ output is identical to the specification listed in the instructions.
+ Also since there was only a single path to the exit, the fact that the
+ algorithm made it to the end without going outside of the maze.
+\end_layout
+
+\begin_layout Enumerate
+For the maze I provided, the algorithm made it to the end of that as well.
+ While the algorithm was able to find the shortest path out of the maze
+ I created, it still cannot find the shortest path.
+ The reason it found it in this maze was due to the way the algorithm interacted
+ with the adjacency list.
+ The shortest path happened to be the first choice when choosing a path
+ and since it made it to the end, there was no reason to go down the other
+ path in the maze.
+\end_layout
+
+\begin_layout Enumerate
+The path lengths are also correct for both mazes due to the way it is calculated.
+ The rooms that are along the path (including the starting room) are added
+ to a stack (using a vector).
+ To find the length of the path, all thats needed is to count the number
+ of elements on the stack.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Another way to verify if the path that is found is correct, it is also possible
+ to actaully draw out the maze to see what paths were actaully possible.
+ I did this to create the maze I used to test the algorithms correctness.
+ 
+\end_layout
+
+\end_deeper
 \begin_layout LyX-Code
 
 \end_layout
